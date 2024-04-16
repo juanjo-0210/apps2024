@@ -17,6 +17,7 @@ const Layauot = ({children}) => (
                 <li><Link to={"/generar-imagen"}>Generar Imagen</Link></li>
                 <li><Link to={"/recuperar-parametro"}>Mostrar Parametro</Link></li>
                 <li><Link to={"/apifetch"}>Api Fetch</Link></li>
+                <li><Link to={"/apiaxios"}>Api Axios</Link></li>
             </ul>
         </nav>
         <main>{children}</main>

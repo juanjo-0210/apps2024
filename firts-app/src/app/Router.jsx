@@ -10,6 +10,7 @@ import GenerarImg from "../ejercicios/GenerarImg"
 import InitAumentar from '../ejercicios/InitAumentar'
 import RecuperarParam from '../ejercicios/RecuperarParam'
 import Apifetch from '../ejercicios/Apifetch'
+import ApiAxios from '../ejercicios/ApiAxios'
 
 
 
@@ -26,6 +27,7 @@ const Router = () => (
                 <Route path="/generar-imagen" element={<GenerarImg/>} />
                 <Route path="/recuperar-parametro/:id/:nombre/:apellidos" element={<RecuperarParam/>} />
                 <Route path="/apifetch" element={<Apifetch/>} />
+                <Route path="/apiaxios" element={<ApiAxios/>} />
                 
                 { /* Es muy recomendable añadir esta ruta para obtener un mensaje de error en el caso de que la ruta no exista. De lo contrario, si la ruta no existe llegaremos a una página en blanco */}    
                 <Route path="*" element={<div>404</div> } />
