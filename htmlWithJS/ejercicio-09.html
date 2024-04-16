@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="moneda">
+      <form>
+        <input type="text" name="a" value="" id="a" />
+        <output for="a" name="o" id="out1"></output>
+        <button type="button" id="sent">Calcular</button>
+      
+    </div>
+    <div class="temp">
+      <input type="text" id="b" />
+      <output type="text" id="out2"></output>
+      <button type="button" id="sent2">Calcular</button>
+    </div>
+    </form>
+    <script>
+      document.querySelector("#sent").addEventListener("click", () => {
+        const euro = document.querySelector("#a").value;
+        const dollar = document.querySelector("#out1");
+        dollar.value = euro * 2;
+      });
+
+      document.querySelector("#sent2").addEventListener("click", () => {
+        const cent = document.querySelector("#b").value;
+        const far = document.querySelector("#out2");
+        far.value = cent * (9 / 5) + 32;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      .container {
+        overflow: hidden;
+        width: 512px;
+      }
+      .slider {
+        width: 2048px;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      .slide {
+        width: 512px;
+        height: 512px;
+      }
+      .batman {
+        width: 512px;
+        background-image: url(./img/tuxes/PinguLinux_Batman.png);
+      }
+      .homero {
+        background-image: url(./img/tuxes/PinguLinux_Homer.png);
+      }
+      .goku {
+        background-image: url(./img/tuxes/PinguLinux_Goku_saiyan.png);
+      }
+      .cell {
+        background-image: url(./img/tuxes/PinguLinux_Celula.png);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">derecha ></a>
+    <div class="container">
+      <div class="slider">
+        <div class="slide batman"></div>
+        <div class="slide homero"></div>
+        <div class="slide goku"></div>
+        <div class="slide cell"></div>
+      </div>
+    </div>
+
+    <script>
+      let count = 0;
+      document.querySelector("a").addEventListener("click", () => {
+        if (count >= 3) {
+          count = 0;
+        } else {
+          count += 1;
+        }
+        document.querySelector(".slider").style.marginLeft =
+          -512 * count + "px";
+        document.querySelector(".slider").style.transition = "1s";
+      });
+    </script>
+  </body>
+</html>

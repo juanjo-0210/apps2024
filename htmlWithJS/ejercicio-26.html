@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <input type="submit" value="calcular" />
+    <output></output>
+
+    <script>
+      const text = document.querySelectorAll("input[type=text]");
+      let aux = 0;
+      document
+        .querySelector("input[type=submit]")
+        .addEventListener("click", () => {
+          text.forEach((text) => (aux += Number(text.value)));
+          document.querySelector("output").innerHTML = aux;
+        });
+    </script>
+  </body>
+</html>

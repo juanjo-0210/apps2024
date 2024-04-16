@@ -1,0 +1,38 @@
+.wrapper{
+    width: 400;
+    height: 30px;
+    border: 1px solid #000;
+    align-items: start;
+    background: url(../img/corazon-mask.png) repeat-x;
+    background-size: 30px;
+    z-index: 1;
+    
+}
+.loading{
+    height: 30px;
+    animation: load 2s forwards;
+    background-color: red;
+    z-index: 2;
+
+}
+
+@keyframes load {
+    from{width: 0%;}
+    to{width: 80%;}
+}
+
+.rotate{
+    width: 1024px;
+    height: 682px;
+    overflow: hidden;
+    background-image: url(../img/espiral-1024x682.jpg);
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    25%{transform: rotate(0deg)}
+    50% {transform: rotate(90deg)}
+    75% {transform: rotate(145deg)}
+    100% {
+        transform: rotate(245deg)}
+}

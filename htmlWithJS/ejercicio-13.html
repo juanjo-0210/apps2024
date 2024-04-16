@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 600px;
+        margin: auto;
+        text-align: center;
+      }
+      table {
+        margin: auto;
+      }
+      td {
+        padding: 20px;
+        border: 1px solid #000;
+      }
+      input[type="text"] {
+        margin: 20px 0;
+        width: 230px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="text" id="screen" disabled />
+      <table>
+        <tr>
+          <td class="numero">0</td>
+          <td class="operador">/</td>
+          <td class="operador">x</td>
+          <td class="operador">-</td>
+        </tr>
+        <tr>
+          <td class="numero">1</td>
+          <td class="numero">2</td>
+          <td class="numero">3</td>
+          <td rowspan="2" class="operador">+</td>
+        </tr>
+        <tr>
+          <td class="numero">4</td>
+          <td class="numero">5</td>
+          <td class="numero">6</td>
+        </tr>
+        <tr>
+          <td class="numero">7</td>
+          <td class="numero">8</td>
+          <td class="numero">9</td>
+          <td id="intro">intro</td>
+        </tr>
+      </table>
+
+      <script>
+        const operador = document.querySelectorAll(".operador");
+        const numero = document.querySelectorAll(".numero");
+        console.log(numero);
+        for (let i = 0; i < numero.length; i++) {
+          numero[i].addEventListener("click", () =>
+            captureNumber(Number(numero[i].innerHTML))
+          );
+        }
+
+        for (let i = 0; i < operador.length; i++) {
+          operador[i].addEventListener("click", () =>
+            captureNumber(operador[i].innerHTML)
+          );
+        }
+
+        const captureNumber = (n) => {
+          document.querySelector("#screen").value += n;
+        };
+
+        const operacion = () => {
+          let aux = document.querySelector("#screen").value;
+          if (aux.includes("+")) {
+            aux = aux.split("+");
+            console.log(aux);
+            document.querySelector("#screen").value =
+              Number(aux[0]) + Number(aux[1]);
+          }
+        };
+
+        document.querySelector("#intro").addEventListener("click", operacion);
+      </script>
+    </div>
+  </body>
+</html>

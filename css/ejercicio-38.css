@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    color: #797979;
+}
+
+
+.wrapper{
+    background-image: url(../img/autopista/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.wrapper p.parraf-principal{
+    padding: 30px 0;
+    border-bottom:2px solid #797979;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../img/autopista/Roboto-Thin.ttf);
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+.row{
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+}
+.header{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.header li:not(:last-of-type){
+    border-right: 1px solid #797979;
+}
+.header a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.banner{
+    height: 400px;
+}
+
+.box1{
+    background-color: #f2f2f2;
+}
+.box2 {
+    background-color: #fff;
+    padding: 50px 0;
+}
+.box3{
+    background-color: #161616;
+}
+.bloque, .flex{
+    display: flex;
+    gap: 50px;
+}
+
+article{
+    margin: 20px 0;
+}
+
+button{
+    background-color: #72ac80;
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+.transparent{
+    padding: 100px;
+    color: white;
+    text-align: center;
+}
+section{
+    width: 45%;
+    text-align: left;
+}
+img{
+   display: block;
+   width: 495px;   
+}
+.flex{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h2{
+    padding: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+footer p{
+   margin-top: 10px;
+   color: #fff;
+}
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .section {
+        padding: 30px;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+      output {
+        display: block;
+        width: 50%;
+        margin: auto;
+      }
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Carta de presentacion</h1>
+    <div class="section">
+      <h2>Motivo</h2>
+      <p>
+        <input
+          type="radio"
+          name="opc1"
+          id=""
+          value="Cuento con varios años de experiencia muy sólida como profesional por lo cual me creo capacitada para asumir las responsabilidades del puesto que ustedes anuncian."
+        />
+      </p>
+
+      <p>
+        <input
+          type="radio"
+          name="opc1"
+          id=""
+          value="En relación al anuncio publicado donde solicitaban un profesional para su empresa, les presento mi candidatura."
+        />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc1"
+          id=""
+          value="El pasado día del mes corriente, se publicó una oferta de trabajo en la que se hacía constar que necesitaban cubrir un puesto de trabajo."
+        />
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Medallas</h2>
+      <p>
+        <input
+          type="radio"
+          name="opc2"
+          id=""
+          value="Como he reseñado en el historial adjunto, aunque solo cuento años de experiencia, confío en mi afán de de superación para llegar a poseer un dominio completo de la profesión. Creo contar con las aptitudes necesarias para poder aportar beneficios muy positivos a su organización"
+        />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc2"
+          id=""
+          value="Debido a mis cualidades personales y mi experiencia, me considero capacitado para desempeñar ese trabajo."
+        />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc2"
+          id=""
+          value="Me adapto con facilidad al trabajo en equipo y baso mi actuación `profesional en una relación duradera y de confianza con la empresa."
+        />
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Objetivo</h2>
+      <p>
+        <input
+          type="radio"
+          name="opc3"
+          id=""
+          value="Agradecería la oportunidad de poder presentarme ante ustedes para contestar cualquier pregunta y ampliar lo resumido en mi historial."
+        />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc3"
+          id=""
+          value="Les agradecería me dejasen formar parte del proceso de selección."
+        />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc3"
+          id=""
+          value="Por todo ello espero que tenga en cuenta mi candidatura ante cualquier necesidad futura se ponga en contacto conmigo."
+        />
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Despedida</h2>
+      <p>
+        <input type="radio" name="opc4" id="" value="Un cordial saludo." />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc4"
+          id=""
+          value="En espera de sus noticias y sin otro particular."
+        />
+      </p>
+      <p>
+        <input
+          type="radio"
+          name="opc4"
+          id=""
+          value="Aprovecho la ocasión para agradecerle el interés que ha manifestado por mi candidatura. Atentamente."
+        />
+      </p>
+    </div>
+    <output></output>
+    <script>
+      let i = 0;
+      const p = Array.from(document.querySelectorAll("p")).map(
+        (obj) => obj.innerHTML
+      );
+
+      document.querySelectorAll("input[type=radio]").forEach((obj) => {
+        obj.closest("p").innerHTML = p[i] + obj.value;
+        i++;
+      });
+      document.querySelectorAll("input").forEach((obj2) => {
+        obj2.addEventListener("click", () => {
+          document.querySelector("output").innerText = "";
+          console.log("hola");
+          document.querySelector("output").innerText += obj2.value;
+        });
+      });
+    </script>
+  </body>
+</html>

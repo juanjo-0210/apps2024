@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .boton {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        cursor: pointer;
+      }
+      .menu {
+        position: fixed;
+        right: -512px;
+        transition: 1s;
+      }
+
+      .desp {
+        width: 500px;
+        height: 500px;
+        background: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="boton"></div>
+    </div>
+
+    <script>
+      document.querySelector(".boton").addEventListener("click", () => {
+        document.querySelector("div").classList.toggle("desp");
+      });
+    </script>
+  </body>
+</html>

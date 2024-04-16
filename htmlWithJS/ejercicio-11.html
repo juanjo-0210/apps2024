@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="number" /><br />
+      <input type="button" value="enviar" id="btn" /><br />
+      <output id="out" dis></output>
+    </form>
+
+    <script>
+      let intentos = 0;
+      const ram = Math.floor(Math.random() * (4 - 1) + 1);
+      const btn = document.querySelector("#btn");
+      let out = document.querySelector("#out");
+      console.log("el numero es el ganador" + ram);
+
+      btn.addEventListener("click", () => {
+        const number = document.querySelector("#number").value;
+        if (intentos < 3) {
+          if (Number(number) === ram) {
+            out.value = "has ganado";
+          } else {
+            console.log(number.value);
+            intentos++;
+            out.value = "has fallado";
+            console.log("intentos" + intentos);
+          }
+        } else {
+          btn.disabled = true;
+          console.log("aqui");
+          out.value = "Ya se han acabado los intentes";
+        }
+      });
+    </script>
+  </body>
+</html>

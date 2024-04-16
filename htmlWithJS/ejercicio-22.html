@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: red;
+        width: 250px;
+        height: 250px;
+        display: none;
+      }
+      .animate__bounce {
+        display: block;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <button>Botar</button>
+    <div></div>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        document
+          .querySelector("div")
+          .classList.add("animate__animated", "animate__bounce");
+      });
+    </script>
+  </body>
+</html>

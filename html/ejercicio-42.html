@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+      div#ventana{
+          width: 790px;
+          display: flex;
+          margin: auto;
+          height: 400px;
+      }
+      div#ventana div:first-of-type{
+        background-color: green;
+        width: 3%;
+      }
+      div#ventana div:nth-of-type(2){
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+      
+
+      }
+      div#ventana div:nth-of-type(2) div:first-of-type{
+        background-color: blue;
+        height: 5%;
+        width: 100%;
+      }
+
+      div#ventana div:nth-of-type(2) div:nth-of-type(2){
+        background-color: orange;
+        height: 90%;
+        width: 100%;
+      }
+
+      div#ventana div:nth-of-type(2) div:last-of-type{
+        background-color: yellow;
+        height: 5%;
+        width: 100%;
+      }
+
+
+      div#ventana div:last-of-type{
+        background-color: red;
+        width: 3%;
+      }
+    	
+</style>
+
+<div class='square'>
+	<div class='square-content'>
+	<div>
+</div>
+  </head>
+  <body>
+    
+    <div id="ventana">
+	<div></div>
+  <div>
+    <div></div>
+    <div></div>
+    <div></div>
+	</div>
+  <div></div>		
+</div>
+  </body>
+</html>

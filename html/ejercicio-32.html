@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // CALCULADORA
+      // const n1 = parseInt(prompt("Primer valor"));
+      // const operador = parseInt(prompt("Cual sera la operacion"));
+      // const n2 = parseInt(prompt("segundo valor"));
+
+      // let resultado;
+      // if (operador === "-") {
+      //   resultado = n1 - n1;
+      // } else if (operador === "+") {
+      //   resultado = n1 + n1;
+      // } else if (operador === "x") {
+      //   resultado = n1 * n1;
+      // } else if (operador === "/") {
+      //   resultado = n1 / n1;
+      // }
+      // alert(`El resultado es:  ${resultado}`);
+
+      // CALCULADORA NUMERO SECRETO
+      // const min = 1;
+      // const max = 5;
+      // const secretN = Math.floor(Math.random() * (max - min)) + min;
+      // const valor = prompt("introduce un numero");
+      // let num = Number(valor);
+      // if (secretN === num) {
+      //   alert("Correcto");
+      // } else {
+      //   alert("Incorrecto");
+      // }
+
+      // CALCULADORA NUMERO SECRETO 3 intentos
+
+      // NUMERO SECRETO DNI
+      const dni = Number(prompt("introduce el dni sin letra"));
+      alert(dni);
+
+      const obtenerLetra = (id) => {
+        const text = "TRWAGMYFPDXBNJZSQVHLCK";
+        if (id.toString().length === 8 && !isNaN(id)) {
+          const resto = id % 23;
+          return text.charAt(resto);
+        } else {
+          return null;
+        }
+      };
+      console.log(obtenerLetra(dni));
+    </script>
+  </body>
+</html>

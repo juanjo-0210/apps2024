@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        max-width: 850px;
+        margin: auto;
+      }
+      .origin {
+        border: 3px dashed red;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 25px;
+        font-size: 1.5em;
+      }
+      .copy {
+        border: 3px dashed blue;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+      }
+      span {
+        cursor: pointer;
+        display: inline-block;
+      }
+      .pan:hover {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="origin"></div>
+      <div class="copy"></div>
+      <button>Comprobar</button>
+    </div>
+
+    <script>
+      const frases = [
+        "la liebre es mas rapida que la tortuga",
+        "la hormiga es mas pequeña que el elefante",
+        "la cebra es blanca con rayas negras",
+      ];
+      const random = Math.floor(Math.random() * 3);
+      const palabras = frases[random].split(" ");
+      const verificador = frases[random].split(" ");
+      const original = document.querySelector(".origin");
+      const copy = document.querySelector(".copy");
+      let i = 0;
+      console.log(palabras);
+
+      function shuffle(array) {
+        let currentIndex = array.length;
+
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+          // Pick a remaining element...
+          let randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
+          ];
+        }
+      }
+      shuffle(palabras);
+
+      palabras.map((palabra) => {
+        original.innerHTML += ` <span>${palabra}</span> `;
+      });
+
+      document.querySelectorAll("span").forEach((palabra) => {
+        palabra.addEventListener("click", () => {
+          copy.innerText += " " + palabra.innerText + " ";
+
+          if (palabra.innerText === verificador[i]) {
+            palabra.style.backgroundColor = "green";
+          } else {
+            palabra.style.backgroundColor = "red    ";
+          }
+          i++;
+        });
+      });
+
+      document.querySelector("button").addEventListener("click", () => {
+        if (copy.innerText === frases[random]) {
+          alert("Perfecto");
+        } else {
+          alert("Has fallado");
+        }
+      });
+    </script>
+  </body>
+</html>

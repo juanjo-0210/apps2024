@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><input type="radio" name="opc1" id="" /></td>
+        <td>txt2</td>
+        <td>txt3</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="opc1" id="" /></td>
+        <td>txt2</td>
+        <td>txt3</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="opc1" id="" /></td>
+        <td>txt2</td>
+        <td>txt3</td>
+      </tr>
+    </table>
+
+    <script>
+      const trs = document.querySelectorAll("tr");
+      trs.forEach((obj) => {
+        obj.addEventListener("click", () => {
+          trs.forEach((obj2) => {
+            obj2.style.backgroundColor = "white";
+          });
+          obj.style.backgroundColor = "red";
+          obj.querySelector("input").checked = true;
+        });
+      });
+    </script>
+  </body>
+</html>

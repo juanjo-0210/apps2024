@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Nombre del cliente:</label><br />
+      <input type="text" id="name" /><br />
+
+      <label for="material">Nombre del cliente:</label><br />
+      <select name="" id="select">
+        <option value="madera">Madera</option>
+        <option value="hierro">Hierro</option>
+        <option value="plastico">Plastico</option>
+      </select>
+      <p>comentarios</p>
+      <textarea name="" id="comment" cols="30" rows="10"></textarea>
+      <br />
+      <p>Seleccione unas dimensiones para la caja:</p>
+      <br />
+      <input type="radio" name="rBtn" class="radiusBtn" value="love1" /><label
+        for=""
+        >Diminuto</label
+      ><br />
+      <input type="radio" name="rBtn" class="radiusBtn" value="love2" /><label
+        for=""
+        >Mediano</label
+      ><br />
+      <input type="radio" name="rBtn" class="radiusBtn" value="love3" /><label
+        for=""
+        >Grande</label
+      ><br />
+      <input type="button" id="btn" value="enviar" />
+      <br />
+      <output id="out" for="" value="hola"></output>
+    </form>
+    <script>
+      const calculate = () => {
+        //const value = document.querySelector('.radiusBtn:checked').value;
+        const value = document.querySelector("[name=rBtn]:checked").value;
+        const nombre = document.querySelector("#name").value;
+        const material = document.querySelector("#select").value;
+        const comment = document.querySelector("#comment").value;
+        let out = document.querySelector("#out");
+        out.value =
+          nombre +
+          "ha pedido una caja de" +
+          material +
+          "con unas dimensiones" +
+          value +
+          ". " +
+          comment;
+        console.log(out);
+      };
+
+      document.querySelector("#btn").addEventListener("click", calculate);
+    </script>
+  </body>
+</html>

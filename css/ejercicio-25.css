@@ -1,0 +1,28 @@
+@font-face {
+    font-family: pablo fuente;
+    src: url(../fuente/fuente.ttf);
+}
+span{
+    transition: 2s;
+}
+p:hover {
+    font-family: pablo fuente;
+    
+}
+
+p:hover .letra3{
+    font-size: 1px;
+}
+
+p:hover .letra1{
+    font-size: 1px;
+}
+
+p:hover .letra2{
+    color: blue;
+    font-size: 12rem;
+}
+p:hover .letra4 {
+    color: orange;
+    font-size: 20rem;
+}

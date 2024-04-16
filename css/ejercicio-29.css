@@ -1,0 +1,59 @@
+.padre{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; 
+  height: 400px;
+  border: 1px solid #000;
+}
+.rigth, .left,.bottomR, .bottomL{
+    height: 200px;
+    width: 50%;
+    /* visibility: hidden; */
+}
+.rigth{
+    top: 0px;
+    right: 0px;
+    background-color: aqua;
+    ;
+}
+.left {
+    
+    top: 0px;
+    left: 0px;
+    background-color: yellow;
+    ;
+}
+.bottomR{
+    background-color: blue;
+    bottom: 0px;
+    left: 0px;
+    ;
+}
+.bottomL {
+    background-color: red;
+    bottom: 0px;
+    right: 0px;
+   
+}
+.center{
+    position: absolute;
+    background-color: blueviolet;
+    align-self: center;
+    left: 25%;
+    z-index: 0;
+    height: 200px;
+    width: 50%;
+}
+
+.rigth:hover{
+    z-index: 1;
+}
+.left:hover {
+    z-index: 1;
+}
+.bottomL:hover {
+    z-index: 1;
+}
+.bottomR:hover {
+    z-index: 1;
+}

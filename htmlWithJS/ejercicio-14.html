@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Introduce la letra del DNI:</label>
+    <input type="text" id="n" /><br />
+
+    <label for="">La letra del DNI</label>
+    <output></output><br />
+
+    <input type="button" id="btn" value="enviar" />
+
+    <script>
+      const l = "TRWAGMYFPDXBNJZSQVHLCKE";
+      const letter = l.split("");
+
+      document.querySelector("#btn").addEventListener("click", () => {
+        let n = Number(document.querySelector("#n").value);
+        if (n.length === 8 && !isNaN(n)) {
+          index = n % 22;
+          document.querySelector("output").value = letter[index - 1];
+        } else {
+          alert("error");
+        }
+      });
+    </script>
+  </body>
+</html>

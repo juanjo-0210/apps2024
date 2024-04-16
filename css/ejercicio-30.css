@@ -1,0 +1,30 @@
+
+
+ul{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+}
+
+li{
+    display: block;
+    list-style: none;
+    width: 150px;
+    padding: 15px;
+    background-color: green;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.parrafo{
+    width: 600px;
+    z-index: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+li:hover{
+    width: 250px;
+    background-color: pink;
+    z-index: 1;
+}

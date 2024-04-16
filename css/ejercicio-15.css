@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(241, 212, 209);
+    
+}
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+
+div{
+    
+    margin: auto;
+    overflow: hidden; 
+      
+}
+
+p{
+    padding: 10px 10px;
+    width: 50%;
+    position: relative;
+
+}
+.left{
+    left: 50%;
+}
+.rigth {
+    left: 0%;
+}
+.center{
+    margin: auto;
+}
+
+.solido{
+    border: 5px solid green;
+    background: rgba(20, 63, 20, 0.856);
+}
+
+.dotted{
+    border: 5px dotted rgb(88, 88, 88);
+    background: rgb(180, 178, 178);
+}
+
+.solidoy {
+    border: 5px solid yellow;
+    background: rgb(236, 236, 114);
+}
+
+.doubble{
+    border: 5px double rgb(88, 88, 88);
+        background: rgb(180, 178, 178);
+}
+.dashed {
+    border: 5px dashed rgb(59, 48, 70);
+    background: rgb(205, 166, 243);
+}
+

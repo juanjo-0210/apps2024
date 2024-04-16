@@ -1,0 +1,27 @@
+@font-face {
+    font-family: pablo;
+    src: url(../fuente/fuente.ttf);
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+a{
+    font-family: pablo;
+    padding: 15px 2px;
+    display: block;
+    text-align: center;
+    width: 80px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+    background-image: url(../img/indiana.png),linear-gradient(to bottom, #006e2e 0%, #f90000 100%);
+    transition: 1s;
+}
+a:hover{
+    background-position: -60px center;
+}

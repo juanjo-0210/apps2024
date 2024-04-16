@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const random = Math.floor(Math.random() * (4 - 0)) + 0;
+      let pause = false;
+
+      const palabras = ["vaca", "coche", "casa", "perro"];
+      alert(palabras[random]);
+      let palabraSecret = palabras[random].replace(/./g, "_ ");
+      alert(palabraSecret);
+
+      const replaceAt = (string, character, index) => {
+        return (
+          string.substring(0, index) +
+          character +
+          string.substring(index + character.length)
+        );
+      };
+
+      while (!pause) {
+        let letter = prompt();
+        if (palabras[random].includes(letter)) {
+          for (let i = 0; i < palabras[random].length; i++) {
+            if (palabras[random].charAt(i) === letter) {
+              palabraSecret = replaceAt(palabraSecret, letter, i * 2);
+            }
+          }
+          alert(palabraSecret);
+        }
+      }
+
+      if (!palabraSecret.includes("_")) {
+        pause = false;
+      }
+    </script>
+  </body>
+</html>

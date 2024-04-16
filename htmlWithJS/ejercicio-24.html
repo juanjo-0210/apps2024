@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/img/PinguLinux_Ying_Yang.png" alt="" id="img" />
+
+    <script>
+      const img = document.querySelector("#img");
+      let foto = true;
+      img.addEventListener("click", () => {
+        if (foto) {
+          img.setAttribute("src", "./img/img/PinguLinux_Yoda.jpg");
+        } else {
+          img.setAttribute("src", "./img/img/PinguLinux_Ying_Yang.png");
+        }
+        foto = !foto;
+      });
+    </script>
+  </body>
+</html>

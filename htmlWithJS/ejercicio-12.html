@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="numNights ">Introduzca el numero de noches:</label>
+      <input type="text" id="numNights" />
+      <select name="" id="ciudad">
+        <option value="Oviedo">Oviedo</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Barcelona">Barcelona</option>
+      </select>
+      <input type="button" value="Calcular coste" id="btn" />
+      <br />
+
+      <label for="hotelCost">Coste hotel</label>
+      <input type="text" id="hotelCost" /><br />
+
+      <label for="costeViaje">Coste viaje</label>
+      <input type="text" id="costeViaje" /><br />
+
+      <label for="alquilerCoche">Coste alquiler coche</label>
+      <input type="text" id="alquilerCoche" /><br />
+
+      <label for="total">Coste total</label>
+      <input type="text" id="total" />
+      <br />
+      <br />
+    </form>
+
+    <script>
+      const calculateCost = () => {
+        const numNights = Number(document.querySelector("#numNights").value);
+        const ciudad = document.querySelector("#ciudad").value;
+
+        const hotelCost = calculateHotelCost(numNights);
+        const costCiudad = calculateAirplaneCost(ciudad, numNights);
+        const alquilerCoche = calculateRentingCarCost(numNights);
+
+        document.querySelector("#hotelCost").value = hotelCost;
+        document.querySelector("#costeViaje").value = costCiudad;
+        document.querySelector("#alquilerCoche").value = alquilerCoche;
+        document.querySelector("#total").value =
+          hotelCost + costCiudad + alquilerCoche;
+      };
+
+      const calculateHotelCost = (numNights) => numNights * 140;
+
+      const calculateAirplaneCost = (ciudad, numNights) => {
+        if (numNights < 3) {
+          if (ciudad === "Oviedo") {
+            return 75;
+          } else if (ciudad === "Tokyo") {
+            return 700;
+          } else if (ciudad === "Madrid" || ciudad === "Barcelona") {
+            return 90;
+          }
+        } else {
+          if (ciudad === "Oviedo") {
+            return 75 * 0.9;
+          } else if (ciudad === "Tokyo") {
+            return 700 * 0.9;
+          } else if (ciudad === "Madrid" || ciudad === "Barcelona") {
+            return 90 * 0.9;
+          }
+        }
+      };
+
+      const calculateRentingCarCost = (numNights) => {
+        if (numNights > 7) {
+          return numNights * 40 - 50;
+        } else if (numNights > 3) {
+          return numNights * 40 - 20;
+        } else {
+          return numNights * 40;
+        }
+      };
+
+      document.querySelector("#btn").addEventListener("click", calculateCost);
+    </script>
+  </body>
+</html>

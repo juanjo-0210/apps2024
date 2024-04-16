@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      ¿Cuáles de los siguientes lenguajes son orientados a objetos?
+      <span class="lan1">Java</span>, VB6, <span class="lan2">C++</span>,
+      <span class="lan3">C#</span>, Cobol
+    </p>
+
+    <div style="width: 100%; height: 100vh">
+      <select name="" id="">
+        <option value=""></option>
+        <option value="pink">Rosa</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+      </select>
+    </div>
+
+    <button>Ver respuesta</button>
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        document.querySelector(".lan1").style.backgroundColor = "red";
+        document.querySelector(".lan2").style.backgroundColor = "red";
+        document.querySelector(".lan3").style.backgroundColor = "red";
+      });
+      const n = document.querySelector("select");
+      n.addEventListener("change", () => {
+        console.log(n.value);
+        if (n.value === "pink") {
+          document.querySelector("div").style.backgroundColor = "pink";
+        } else if (n.value === "red") {
+          document.querySelector("div").style.backgroundColor = "red";
+        } else if (n.value === "blue") {
+          document.querySelector("div").style.backgroundColor = "blue";
+        } else if (n.value === "green") {
+          document.querySelector("div").style.backgroundColor = "green";
+        }
+      });
+    </script>
+  </body>
+</html>

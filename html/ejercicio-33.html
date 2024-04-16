@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numNoches = prompt("numero de noches");
+      const destino = prompt("destino").toLocaleLowerCase();
+
+      const costeHotel = (numNoches) => {
+        const res = numNoches * 140;
+        return res;
+      };
+
+      const costeAvion = (destino, numNoches) => {
+        const oviedo = 15;
+        const tokyo = 700;
+        const madrid = 90;
+        const barcelona = 90;
+        let resul = 0;
+
+        if (destino === "oviedo") {
+          resul = numNoches * oviedo;
+        } else if (destino === "tokyo") {
+          resul = numNoches * tokyo;
+        } else if (destino === "madrid") {
+          resul = numNoches * madrid;
+        } else if (destino === "barcelona") {
+          resul = numNoches * barcelona;
+        }
+
+        // if (numNoches > 3) {
+        //   resul * 0.9;
+        // }
+        return resul;
+      };
+
+      const costeAlquilerCoche = (numNoches) => {
+        let coste = numNoches * 40;
+        if (numNoches <= 7) {
+          coste = numNoches * 40 - 20;
+        } else if (numNoches > 3) {
+          coste = numNoches * 40 - 50;
+        }
+
+        return coste;
+      };
+
+      const resultado1 = Number(costeHotel(numNoches));
+      const resultado2 = Number(costeAvion(destino, numNoches));
+      const resultado3 = Number(costeAlquilerCoche(numNoches));
+      console.log("Coste hotel: " + resultado1);
+      console.log("Coste viaje: ", resultado2);
+      console.log("Coste alquiler coche: ", resultado3);
+      console.log("Total:", resultado1 + resultado2 + resultado3);
+    </script>
+  </body>
+</html>

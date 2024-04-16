@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      label {
+        display: inline-block;
+        width: 200px;
+        vertical-align: top;
+      }
+      input,
+      textarea {
+        display: inline-block;
+        width: 200px;
+      }
+      input[type="submit"] {
+        margin: 5px 0 0 100px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Maquetación de un formulario con HTML y CSS</h1>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" name="" id="name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" name="" id="email" />
+      <br />
+      <label for="comentarios">Comentarios:</label>
+      <textarea name="" id="comentarios" cols="30" rows="10"></textarea>
+      <br />
+      <span>Acepto las condiciones</span>
+
+      <input type="checkbox" name="" id="" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

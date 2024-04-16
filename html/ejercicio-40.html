@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 150px;
+      }
+      input,
+      textarea {
+        display: inline-block;
+        width: 200px;
+        margin-top: 15px;
+      }
+
+      input:required {
+        border: 4px solid #000;
+      }
+      span {
+        display: none;
+        margin: 10px 0 0 5px;
+      }
+      :valid + span {
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/success.png);
+        display: inline-block;
+      }
+      input:not(input[type="submit"]):valid {
+        background-color: palegreen;
+      }
+      input:not(input[type="submit"]):invalid {
+        background-color: salmon;
+      }
+      input[type="range"] {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Validación de un formulario con HTML</h1>
+    <form action="">
+      <label for="name">Nombre:</label>
+      <input
+        type="text"
+        name="nombre"
+        id="name"
+        autofocus
+        required
+      /><span></span>
+      <br />
+      <label for="edad">Edad:</label>
+      <input
+        type="number"
+        name=""
+        id="edad"
+        min="1"
+        max="100"
+        required
+      /><span></span>
+      <br />
+      <label for="cp">Codigo postal</label>
+      <input
+        type="text"
+        name=""
+        id="cp"
+        pattern="^[0-9]{5}$"
+        required
+      /><span></span>
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" name="" id="email" /><span></span>
+      <br />
+      <label for="date">Fecha de reserva:</label>
+      <input type="date" name="" id="date" required /><span></span>
+      <br />
+      <label for="nota">Nota:</label>
+      <input type="range" name="" id="nota" value="75" />
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

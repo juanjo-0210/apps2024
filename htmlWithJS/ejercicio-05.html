@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const board = ["", "", "", "", "", "", "", "", "", ""];
+      let haGanadoAlguien = true;
+      let signo = ["x", "o"];
+      let turn = true;
+      const play = (elec, board) => {
+        board[elec] = turn ? signo[0] : signo[1];
+      };
+
+      const evaluarGan = (boar, let) => {
+        if (boar[0] === let && boar[1] === let && boar[2] === let) {
+          return false;
+        } else if (boar[(0, 3, 6)] === let) {
+          return false;
+        } else if (boar[(0, 4, 8)] === let) {
+          return false;
+        } else if (boar[(1, 4, 7)] === let) {
+          return false;
+        } else if (boar[(2, 5, 8)] === let) {
+          return false;
+        } else if (boar[(2, 4, 6)] === let) {
+          return false;
+        } else if (boar[(3, 4, 5)] === let) {
+          return false;
+        } else if (boar[(6, 7, 8)] === let) {
+          return false;
+        }
+        return true;
+      };
+
+      const printBoard = () => {
+        alert(
+          board[0] +
+            "|" +
+            board[1] +
+            "|" +
+            board[2] +
+            "\n" +
+            board[3] +
+            "|" +
+            board[4] +
+            "|" +
+            board[5] +
+            "\n" +
+            board[6] +
+            "|" +
+            board[7] +
+            "|" +
+            board[8]
+        );
+      };
+
+      do {
+        let elec = Number(prompt("Elige un numero del 0 al 8"));
+        play(elec, board);
+        printBoard();
+        haGanadoAlguien = evaluarGan(board, () => (turn ? signo[0] : signo[1]));
+
+        if (!haGanadoAlguien) {
+          alert(`Ha ganado ${turn ? signo[0] : signo[1]}`);
+        }
+        turn = !turn;
+      } while (haGanadoAlguien);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ejercicio-38.css" />
+  </head>
+  <body>
+    <div onscroll="scroll()" class="wrapper">
+      <div class="container-fluid menu">
+        <div class="row">
+          <ul class="header">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PORFOLIO</a></li>
+            <li><a href="#">PACI2</a></li>
+            <li><a href="#">PACI3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid banner"></div>
+      <div class="container-fluid box1">
+        <div class="row">
+          <h1>Maquetación de una web con HTML y CSS</h1>
+          <p class="parraf-principal">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
+            ducimus quae, ratione corrupti, minus possimus. Unde maxime
+            repudiandae, delectus ab perferendis cum eaque reprehenderit,
+            necessitatibus velit reiciendis atque totam culpa.
+          </p>
+        </div>
+        <div class="row bloque">
+          <article>
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+              adipisci reiciendis culpa unde consequuntur in blanditiis neque
+              odit, voluptates, officia laborum porro deleniti nam. Repudiandae
+              optio ab, veritatis pariatur! Corrupti
+            </p>
+            <button>Read More</button>
+          </article>
+          <article>
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+              adipisci reiciendis culpa unde consequuntur in blanditiis neque
+              odit, voluptates, officia laborum porro deleniti nam. Repudiandae
+              optio ab, veritatis pariatur! Corrupti
+            </p>
+            <button>Read More</button>
+          </article>
+          <article>
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+              adipisci reiciendis culpa unde consequuntur in blanditiis neque
+              odit, voluptates, officia laborum porro deleniti nam. Repudiandae
+              optio ab, veritatis pariatur! Corrupti
+            </p>
+            <button>Read More</button>
+          </article>
+        </div>
+      </div>
+      <div class="container-fluid box2">
+        <div class="row flex">
+          <section>
+            <img src="../img/autopista/pic01.jpg" alt="" />
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, doloremque, ipsa. Saepe, dolorem totam consectetur. Sunt
+              eos molestias nihil praesentium vero natus deleniti reiciendis ex
+              laborum distinctio, excepturi quo laudantium.
+            </p>
+          </section>
+          <section>
+            <img src="../img/autopista/pic02.jpg" alt="" />
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, doloremque, ipsa. Saepe, dolorem totam consectetur. Sunt
+              eos molestias nihil praesentium vero natus deleniti reiciendis ex
+              laborum distinctio, excepturi quo laudantium.
+            </p>
+          </section>
+          <section>
+            <img src="../img/autopista/pic03.jpg" alt="" />
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, doloremque, ipsa. Saepe, dolorem totam consectetur. Sunt
+              eos molestias nihil praesentium vero natus deleniti reiciendis ex
+              laborum distinctio, excepturi quo laudantium.
+            </p>
+          </section>
+          <section>
+            <img src="../img/autopista/pic04.jpg" alt="" />
+            <h3>bla bla</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, doloremque, ipsa. Saepe, dolorem totam consectetur. Sunt
+              eos molestias nihil praesentium vero natus deleniti reiciendis ex
+              laborum distinctio, excepturi quo laudantium.
+            </p>
+          </section>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <p class="transparent">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quae
+          iure autem esse, harum necessitatibus earum consequatur omnis dolor
+          consectetur, odio cum reiciendis expedita neque quod vero et in Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi
+          laborum mollitia nemo dolore sit expedita vel quasi,
+        </p>
+      </div>
+      <footer class="content-fluid box3">
+        <div class="row">
+          <h2>Bla bla bla</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quos
+            eius sit, ipsam blanditiis dolore hic quae mollitia, aspernatur!
+            Iusto maiores reprehenderit placeat. Recusandae fuga amet, magnam
+            dolor error soluta.
+          </p>
+          <p>Bla bla bla</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const fondo = document.getElementsByClassName("wrapper")[0];
+      console.log(fondo);
+      let valor = 0;
+      function scroll() {
+        if (fondo.scroll) {
+          let valor = 0;
+          valor = 1;
+        }
+        console.log(valor);
+      }
+    </script>
+  </body>
+</html>

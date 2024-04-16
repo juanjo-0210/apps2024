@@ -1,0 +1,20 @@
+div{
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;   
+     
+}
+.box1{
+    background-image: url(../img/html-right.png), url(../img/html-left.png);
+    background-repeat: no-repeat;
+    background-position: top right, top left;   
+}
+.box2{
+    background-image: 
+        url(../img/tijeras.svg), 
+        url(../img/mundo.svg), 
+        radial-gradient(ellipse at center, #f931a3 0%, #47aa20 51%, #7db9e8 100%);
+    background-repeat: no-repeat;
+    background-size: auto auto, 50% 50%;
+    background-position: bottom right ;
+}

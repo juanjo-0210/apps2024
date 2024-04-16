@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slider {
+        border: 1px solid #000;
+        display: flex;
+        width: 1500px;
+        transition: 1s;
+        height: 500px;
+      }
+      .slider div {
+        height: 500px;
+        width: 500px;
+        transition: 1s;
+        transform: scale(0);
+      }
+      .batman {
+        background-image: url("./img/tuxes/PinguLinux_Batman.png");
+      }
+      .viking {
+        background-image: url("./img/tuxes/PinguLinux_Viking.png");
+      }
+      .naruto {
+        background-image: url("./img/tuxes/PinguLinux_Naruto.png");
+      }
+      .visible {
+        transform: scale(1) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Programación de un slider con animaciones usando Javascript</h1>
+    <div class="wrapper">
+      <p><button>Enlace 1</button></p>
+      <div class="slider">
+        <div class="slide batman"></div>
+        <div class="slide viking"></div>
+        <div class="slide naruto"></div>
+      </div>
+    </div>
+
+    <script>
+      let count = 0;
+      const slides = document.querySelectorAll(".slide");
+      document.querySelector("button").addEventListener("click", () => {
+        count++;
+        if (count >= 3) count = 0;
+        slides.forEach((obj) => {
+          console.log(count);
+          obj.classList.remove("visible");
+        });
+
+        slides[count].classList.add("visible");
+        console.log(slides[count]);
+      });
+    </script>
+  </body>
+</html>

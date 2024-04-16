@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .first,
+      div {
+        display: none;
+      }
+      input:checked + div {
+        display: block;
+      }
+      .second {
+        display: none;
+      }
+      .second:checked + .check {
+        background-position: -19px;
+      }
+      .check {
+        width: 19px;
+        height: 19px;
+        display: block;
+        border-radius: 3px;
+        background-image: url(../img/check_radio_sheet.png);
+      }
+    </style>
+  </head>
+  <body>
+    <label for="check">SPOILER</label>
+    <input type="checkbox" id="check" class="first" />
+    <div>PARRAFO OCULTO</div>
+
+    <input type="checkbox" id="second" class="second" />
+    <label for="second" class="check"></label>
+  </body>
+</html>

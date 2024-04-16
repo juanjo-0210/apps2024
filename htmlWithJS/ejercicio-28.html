@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .section {
+        padding: 30px;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-top: 20px;
+        max-width: 412px;
+      }
+      output {
+        display: block;
+        width: 100%;
+        height: 100px;
+        background-color: pink;
+        color: salmon;
+        margin-top: 20px;
+        font-size: 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <input type="radio" name="opc1" id="" value="100" /> El cliente me
+      suministra el diseño
+      <br />
+      <input type="radio" name="opc1" id="" value="400" />Yo me encargo del
+      diseño
+    </div>
+    <div class="section">
+      <input type="radio" name="opc2" id="" value="100" />La página no incorpora
+      carrito de la compra
+      <br />
+      <input type="radio" name="opc2" id="" value="600" /> La página incorpora
+      un carrito de la compra
+    </div>
+    <div class="section">
+      <input type="radio" name="opc3" id="" value="100" /> La página no permite
+      suscripción
+      <br />
+      <input type="radio" name="opc3" id="" value="600" /> La página permite
+      suscripción
+    </div>
+    <output></output>
+
+    <script>
+      let aux = 0;
+      document.querySelectorAll("input").forEach((obj) => {
+        obj.addEventListener("click", () => {
+          aux += Number(obj.value);
+          document.querySelector("output").innerHTML = aux;
+        });
+      });
+
+      //   document
+      //     .querySelectorAll("[type=radio]:checked")
+      //     .addEventListener("input", () => {
+      //       document.querySelectorAll("[type=radio]:checked").forEach((obj) => {
+      //         aux += Number(obj.value);
+      //         document.querySelector("output").innerHTML = aux;
+      //       });
+      //     });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        border: 1px solid #000;
+        overflow: hidden;
+        width: 500px;
+        transition: 1s;
+        height: 500px;
+      }
+      .slider {
+        width: 1500px;
+        display: flex;
+      }
+      .slider div {
+        height: 500px;
+        width: 500px;
+        transition: 1s;
+      }
+      .batman {
+        background-image: url("./img/tuxes/PinguLinux_Batman.png");
+      }
+      .viking {
+        background-image: url("./img/tuxes/PinguLinux_Viking.png");
+      }
+      .naruto {
+        background-image: url("./img/tuxes/PinguLinux_Naruto.png");
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Programación de un slider con animaciones usando Javascript</h1>
+    <button>Enlace 1</button>
+    <div class="wrapper">
+      <div class="slider">
+        <div class="slide batman"></div>
+        <div class="slide viking"></div>
+        <div class="slide naruto"></div>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let count = 0;
+      slides.forEach((obj) => {
+        obj.style.scale = 0;
+      });
+      slides[count].style.scale = 1;
+
+      document.querySelector("button").addEventListener("click", () => {
+        console.log(count);
+
+        slides[count].style.scale = 0;
+        slides[count].style.marginLeft = "-500px";
+        count++;
+        if (count > 2) count = 0;
+        console.log(count);
+        slides[count].style.scale = 1;
+      });
+    </script>
+  </body>
+</html>

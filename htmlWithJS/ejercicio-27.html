@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>¿Que super heroe es más fuerte?</p>
+    <p><input type="radio" name="opc1" id="" value="batman" />Batman</p>
+
+    <p><input type="radio" name="opc1" id="" value="superman" />Superman</p>
+
+    <p>¿En qué consiste el sentido aracnido de Spiderman?</p>
+    <p>
+      <input type="radio" name="opc2" id="" value="arañas" />Puede detectar
+      cuando hay arañas cerca.
+    </p>
+
+    <p>
+      <input type="radio" name="opc2" id="" value="peligro" />Puede detectar
+      cuando hay un peligro cerca.
+    </p>
+
+    <p>¿Cuál es el verdadero nombre de Spiderman?</p>
+    <p>
+      <input type="radio" name="opc3" id="" value="peter parker" />Peter Parker
+    </p>
+
+    <p>
+      <input type="radio" name="opc3" id="" value="bruce wayne" />Bruce Wayne
+    </p>
+
+    <button>Enviar</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        document
+          .querySelectorAll("input[type=radio]:checked")
+          .forEach((obj) => {
+            console.log(obj.value);
+            if (
+              obj.value === "superman" ||
+              obj.value === "peligro" ||
+              obj.value === "peter parker"
+            ) {
+              obj.closest("p").style.backgroundColor = "green";
+            } else {
+              obj.closest("p").style.backgroundColor = "red";
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

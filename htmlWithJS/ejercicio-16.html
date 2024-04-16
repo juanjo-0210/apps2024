@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <div class="impresion"></div>
+
+    <script>
+      document.querySelector("input").addEventListener("input", () => {
+        const n = Number(document.querySelector("input").value);
+        // for (let i = 0; i < n; i++) {
+        //   document.querySelector(".impresion").innerHTML +=
+        //     "<p> cositas guay </p>";
+        //   console.log("loop");
+        // }
+        document.querySelector(".impresion").innerHTML += "cositas guay".repeat(
+          n
+        );
+      });
+    </script>
+  </body>
+</html>

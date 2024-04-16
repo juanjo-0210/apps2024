@@ -1,0 +1,10 @@
+p{
+    padding: 80px;
+    font-size: 5rem;
+    text-shadow: -60px 60px 3px  blue, -60px -60px 3px orange, 60px 60px 3px green, 60px -60px 3px red;
+    transition: 1s;
+}
+
+p:hover{
+    text-shadow: 60px -60px 3px red, 60px 60px 3px green, -60px -60px 3px orange, -60px 60px 3px blue;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      .price {
+        color: blue;
+      }
+      img {
+        width: 100%;
+        height: 350px;
+      }
+      .wrapper div {
+        background-color: blanchedalmond;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px #e7e5e5c2;
+      }
+      .wrapper p {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper"></div>
+
+    <script>
+      fetch("https://api.mercadolibre.com/sites/MLA/search?q=amor")
+        .then((res) => res.json())
+        .then((res) => data(res.results));
+
+      const data = (productos) => {
+        productos.map((producto) => {
+          document.querySelector(
+            ".wrapper"
+          ).innerHTML += `<div> <img src="${producto.thumbnail}" /> <p class="price"> <p> ${producto.title} </p>  ${producto.price} </p> </div>`;
+        });
+      };
+    </script>
+  </body>
+</html>
