@@ -47,10 +47,30 @@ display: flex;
 
 export const Row = styled.div`
 display: flex;
-.img{
+/* .img{
        max-width: 100%;
        height: 700px;
+    } */
+`
+
+export const Nav = styled.nav`
+max-width: 20%;
+background-color: aliceblue;
+height: 100vh;
+padding: 0 20px;
+position: sticky;
+top: 0;
+    ul{
+        list-style: none;
     }
+    li{
+        margin-top: 5px;
+    }
+`
+export const Main = styled.main`
+max-width: 80%;
+padding: 20px;
+box-sizing: border-box;
 `
 
 export const Cols = styled.div`
@@ -65,8 +85,8 @@ export const Cols4 = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
     img{
-        max-width: 100%;
-        max-height: 100%;
+       // max-width: 100%;
+        //max-height: 100%;
     }
 `
 
@@ -98,3 +118,15 @@ export const Door = styled.div`
     border: 1px solid red;
     cursor: pointer;
 `;
+
+export const Pages = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+position: fixed;
+bottom: 0;
+    span{
+        margin: 10px;
+        cursor: pointer;
+    }
+`

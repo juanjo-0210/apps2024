@@ -11,11 +11,21 @@ import InitAumentar from '../ejercicios/InitAumentar'
 import RecuperarParam from '../ejercicios/RecuperarParam'
 import Apifetch from '../ejercicios/Apifetch'
 import ApiAxios from '../ejercicios/ApiAxios'
+import Starwar from '../ejercicios/Starwar'
+import StarWarCharacter from '../ejercicios/StarWarCharacter'
 
 
 
 const Router = () => (
-     <BrowserRouter>
+     <BrowserRouter >
+        <Routes>
+            <Route path="/starwar/starwarWarCharacter/:api" element={
+                <Layauot>
+                    <StarWarCharacter/>
+                </Layauot>
+            } />
+        </Routes>
+
         <Layauot>
             <Routes>   
                 <Route index element={<Home/>} />
@@ -28,11 +38,12 @@ const Router = () => (
                 <Route path="/recuperar-parametro/:id/:nombre/:apellidos" element={<RecuperarParam/>} />
                 <Route path="/apifetch" element={<Apifetch/>} />
                 <Route path="/apiaxios" element={<ApiAxios/>} />
-                
+                <Route path="/starwar/" element={<Starwar/>} />
                 { /* Es muy recomendable añadir esta ruta para obtener un mensaje de error en el caso de que la ruta no exista. De lo contrario, si la ruta no existe llegaremos a una página en blanco */}    
                 <Route path="*" element={<div>404</div> } />
             </Routes>
         </Layauot>
+        
     </BrowserRouter>
 )
 

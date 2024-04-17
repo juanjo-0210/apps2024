@@ -1,5 +1,5 @@
 import  { useEffect, useState } from 'react'
-import { libreData} from "../service/mercadoLibreApi.js"
+import { libreData } from "../service/hogar.js"
 import {Cols4, Img} from '../app/styles.js';
 
 const ApiAxios = () => {
