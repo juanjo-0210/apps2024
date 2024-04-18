@@ -30,14 +30,10 @@ const StarWarCharacter = () => {
         <p>Skin color: {data.skin_color}</p>
         <h2>Films</h2>
         <ul>
-            {/* {dataFilms.map((url,index) => {
-                //getDStarWarFilms(aux[aux.length - 2]).then(res => res.data)
-                //fetch(url).then(res => res.json()).then(res => console.log(res.title) )
-                return(
-                    <li key={index}>{url}</li>
-                )
-            }                
-            )} */}
+            {dataFilms.map((url) => (
+                <li >{url.title}</li>
+              )              
+            )} 
         </ul>
     </div>
   )
