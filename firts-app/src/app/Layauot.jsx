@@ -4,9 +4,7 @@ import { Nav, Row, Main } from './styles';
 
 const Layauot = ({children}) => (
     <>  
-        <div>
-            <h1 style={{textAlign:"center"}}>Home</h1>
-        </div>
+        
         <Row>
             <Nav>
                 <ul>
@@ -23,7 +21,12 @@ const Layauot = ({children}) => (
                     <li><Link to={"/starwar"}>STAR WAR API EJERCICIO</Link></li>
                 </ul>
             </Nav>
-            <Main>{children}</Main>
+            <Main>
+                <div>
+                    <h1 style={{textAlign:"center"}}>Home</h1>
+                </div>
+                {children}
+            </Main>
         </Row>
     </>
 )

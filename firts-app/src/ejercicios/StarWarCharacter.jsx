@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getDStarWarPeople, getDStarWarFilms, getPelis } from "../service/StarWarApi"
+import { Cols, Img, Row } from "../app/styles"
 
 
 const StarWarCharacter = () => {
@@ -20,22 +21,29 @@ const StarWarCharacter = () => {
     }, [])
    console.log('888888888888',dataFilms)
   return (
-    <div>
+    <>
        
        
-        <h1>{data.name}</h1>
-        <p>Height: {data.height}</p>
-        <p>Gender: {data.gender}</p>
-        <p>Hair color: {data.hair_color}</p>
-        <p>Skin color: {data.skin_color}</p>
-        <h2>Films</h2>
-        <ul>
-            {dataFilms.map((url) => (
-                <li >{url.title}</li>
-              )              
-            )} 
-        </ul>
-    </div>
+        <Row>
+          <div>
+            <h1>{data.name}</h1>
+            <p>Height: {data.height}</p>
+            <p>Gender: {data.gender}</p>
+            <p>Hair color: {data.hair_color}</p>
+            <p>Skin color: {data.skin_color}</p>
+            <h2>Films</h2>
+            <ul>
+                {dataFilms.map((url) => (
+                    <li >{url.title}</li>
+                  )              
+                )} 
+            </ul>
+          </div>
+          <div>
+          <Img src={`https://starwars-visualguide.com/assets/img/characters/${api}.jpg`}/>
+          </div>
+        </Row>
+    </>
   )
 }
 

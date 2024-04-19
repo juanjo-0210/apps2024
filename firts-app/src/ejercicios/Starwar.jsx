@@ -30,7 +30,6 @@ useEffect(() => {
                     >
                         <Img src={`https://starwars-visualguide.com/assets/img/characters/${id[ id.length - 2]}.jpg`}/>
                         <p >{obj.name}</p>
-                        <p>{obj.url}</p>
                     </Link>
                 </div>
                 

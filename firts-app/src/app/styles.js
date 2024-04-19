@@ -47,6 +47,7 @@ display: flex;
 
 export const Row = styled.div`
 display: flex;
+box-sizing: border-box;
 /* .img{
        max-width: 100%;
        height: 700px;
@@ -75,6 +76,7 @@ box-sizing: border-box;
 
 export const Cols = styled.div`
 display: grid;
+max-width: 100%;
 grid-template-columns: 1fr 1fr;
     img{
         max-width: 100%;
@@ -83,6 +85,7 @@ grid-template-columns: 1fr 1fr;
 `
 export const Cols4 = styled.div`
 display: grid;
+gap: 10px;
 grid-template-columns: 1fr 1fr 1fr 1fr;
     img{
        // max-width: 100%;
