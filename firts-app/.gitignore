@@ -13,7 +13,7 @@ dist
 dist-ssr
 *.local
 
-/node_modules
+firts-app/node_modules
 
 # Editor directories and files
 .vscode/*
