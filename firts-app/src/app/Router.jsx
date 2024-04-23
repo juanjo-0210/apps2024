@@ -13,8 +13,9 @@ import Apifetch from '../ejercicios/Apifetch'
 import ApiAxios from '../ejercicios/ApiAxios'
 import Starwar from '../ejercicios/Starwar'
 import StarWarCharacter from '../ejercicios/StarWarCharacter'
-
-
+import Parchis from '../ejercicios/Parchis'
+import LogProvider from "../ejercicios/LogProvider"
+import Form from '../ejercicios/Form'
 
 const Router = () => (
      <BrowserRouter >
@@ -22,7 +23,7 @@ const Router = () => (
         
             <Routes>   
                 <Route index element={
-                <Home/>} />
+                <Layauot><Home/></Layauot>} />
                 <Route path="/page2" element={<Layauot><Page2/></Layauot>} />
                 <Route path="/aumentar" element={<Layauot><InitAumentar/></Layauot>} />
                 <Route path="/author" element={<Layauot><Author/></Layauot>} />
@@ -33,10 +34,20 @@ const Router = () => (
                 <Route path="/apifetch" element={<Layauot><Apifetch/></Layauot>} />
                 <Route path="/apiaxios" element={<Layauot><ApiAxios/></Layauot>} />
                 <Route path="/starwar/" element={<Layauot><Starwar/></Layauot>} />
-
+                <Route path='/parchis' element={<Layauot><Parchis/></Layauot>} />
                 <Route path="/starwar/starwarWarCharacter/:api" element={
                     <Layauot>
                         <StarWarCharacter/>
+                    </Layauot>
+                    } />
+                <Route path="/logprovider" element={
+                    <Layauot>
+                        <LogProvider/>
+                    </Layauot>
+                    } />
+                    <Route path="/form" element={
+                    <Layauot>
+                        <Form/>
                     </Layauot>
                     } />
                 { /* Es muy recomendable añadir esta ruta para obtener un mensaje de error en el caso de que la ruta no exista. De lo contrario, si la ruta no existe llegaremos a una página en blanco */}    

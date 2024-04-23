@@ -19,7 +19,7 @@ const StarWarCharacter = () => {
 
       
     }, [])
-   console.log('888888888888',dataFilms)
+  
   return (
     <>
        

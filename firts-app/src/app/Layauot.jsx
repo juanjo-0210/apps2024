@@ -19,6 +19,9 @@ const Layauot = ({children}) => (
                     <li><Link to={"/apifetch"}>Api Fetch</Link></li>
                     <li><Link to={"/apiaxios"}>Api Axios</Link></li>
                     <li><Link to={"/starwar"}>STAR WAR API EJERCICIO</Link></li>
+                    <li><Link to={"/parchis"}>Parchis</Link></li>
+                    <li><Link to={"/logprovider"}>Log Provider</Link></li>
+                    <li><Link to={"/form"}>Formulario</Link></li>
                 </ul>
             </Nav>
             <Main>
