@@ -1,11 +1,20 @@
+import { Timestamp } from "firebase/firestore";
+
 export interface DocData  {
+    userName: string;
     id:string;
+    date: string
     [key:string]: unknown;
 }
 
-export type PersonalData = DocData & {
+export type PersonalData =  {
     userName: string;
-    id:string
     date: string
+    id:string;
 }
 
+export type Personal =  {
+    userName: string;
+    date: Timestamp;
+    id:string;
+}

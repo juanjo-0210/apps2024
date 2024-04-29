@@ -1,10 +1,10 @@
 import { db, collection, addDoc, getDocs, query, doc, deleteDoc } from "./api";
 import { Task, Id } from "../common/types/task"
 import { DocData, PersonalData } from "../common/types/personalData"
-import { type QuerySnapshot } from "firebase/firestore";
+import { getDoc, updateDoc, type QuerySnapshot } from "firebase/firestore";
 
 
-const collectionName:string = 'Persons';
+const collectionName:string = 'patients';
 
 // CREATE
 export const createPersons = async(obj:PersonalData[]) => {
@@ -14,7 +14,7 @@ export const createPersons = async(obj:PersonalData[]) => {
 }
 
     //CON TYPESCRIPT
-    export const createPersonsTypeS = async (obj:PersonalData[]) => {
+    export const createPersonsTypeS = async (obj:PersonalData) => {
     const colRef = collection(db,collectionName);
     const data:Id = await addDoc(colRef, obj);
     return data.id;
@@ -37,7 +37,17 @@ export const getItems = async ()  => {
     return getArrayFromCollection(result);
     };
 
+    export const getItemById = async (id:string):Promise<Task[]> => {
+    const docRef = doc(db, collectionName, id);
+    const result = await getDoc(docRef);
+    return result.data();
+}
 
+// UPDATE
+export const updateItem = async (id:string, obj:PersonalData) => {
+    const docRef = doc(db, collectionName, id);
+    await updateDoc(docRef, obj)
+}
 
 // DELETE
 export const deleteItem = async (id:string) => {
