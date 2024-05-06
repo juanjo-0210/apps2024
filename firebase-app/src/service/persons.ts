@@ -45,6 +45,7 @@ export const deleteItem = async (id) => {
 }
 
 const getArrayFromCollection = (collection) => {
+    console.log("1111111", collection)
     return collection.docs.map(doc => {
         return { ...doc.data(), id: doc.id };
     });
