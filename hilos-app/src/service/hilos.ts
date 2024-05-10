@@ -1,3 +1,4 @@
+import { Task } from "../common/types/task";
 import { db, collection, addDoc, getDocs, query, doc, deleteDoc } from "./api";
 import { getDoc, updateDoc, type QuerySnapshot } from "firebase/firestore";
 
@@ -53,7 +54,7 @@ export const deleteItem = async (id:string) => {
     await deleteDoc(docRef);
 }
 
-const getArrayFromCollection = (collection: QuerySnapshot):DocData[] => {
+const getArrayFromCollection = (collection: QuerySnapshot) => {
     return collection.docs.map(doc => {
         return { ...doc.data(), id: doc.id };
     });
