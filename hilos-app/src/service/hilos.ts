@@ -6,14 +6,14 @@ import { getDoc, updateDoc, type QuerySnapshot } from "firebase/firestore";
 const collectionName:string = 'hilos';
 
 // CREATE
-export const createPersons = async(obj) => {
+export const createPersons = async(obj:Task[]) => {
     const colRef = collection(db, collectionName);
     const data = await addDoc(colRef, obj);
     return data.id;
 }
 
     //CON TYPESCRIPT
-    export const createPersonsTypeS = async (obj) => {
+    export const createPersonsTypeS = async (obj:Task[]) => {
     const colRef = collection(db,collectionName);
     const data = await addDoc(colRef, obj);
     return data.id;
@@ -36,14 +36,14 @@ export const getItems = async ()  => {
     return getArrayFromCollection(result);
     };
 
-    export const getItemById = async (id:string):Promise<string> => {
+    export const getItemById = async (id:string):Promise<Task> => {
     const docRef = doc(db, collectionName, id);
     const result = await getDoc(docRef);
     return result.data();
 }
 
 // UPDATE
-export const updateItem = async (id, obj) => {
+export const updateItem = async (id:string, obj:Task) => {
     const docRef = doc(db, collectionName, id);
     await updateDoc(docRef, obj)
 }

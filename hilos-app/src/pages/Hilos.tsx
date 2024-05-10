@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { getItems } from '../service/hilos'
 import { Task } from '../common/types/task'
 
@@ -13,6 +13,7 @@ const Hilos = () => {
   return (
     <div>
       <input type="text" value={hilos} onChange={e => setHilos(e.target.value)}/>
+      <p>{printHilo?.map( p => <p>{p.name}</p>)}</p>
     </div>
   )
 }
