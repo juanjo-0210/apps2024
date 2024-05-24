@@ -1,5 +1,5 @@
-import { TextInput, View, Pressable,Text } from "react-native";
-import styled from "styled-components";
+// import { TextInput, View, Pressable,Text } from "react-native";
+import styled from "styled-components/native";
 
 export const Input = styled.TextInput`
     background-color: salmon;
@@ -11,13 +11,13 @@ export const Input = styled.TextInput`
 
 export const Container = styled.View`
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
     background-color: black;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    margin: auto;
+    /* width: 80%; */
+    /* margin: auto; */
 `
 
 export const Button = styled.Pressable`
@@ -28,9 +28,10 @@ export const Button = styled.Pressable`
 `
 
 export const Box = styled.Text`
+
 display: block;
 width: 100%;
-background-color: orange;
+background-color: red;
 padding: 8px;
 text-align: center;
 margin-top: 10px;

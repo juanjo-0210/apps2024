@@ -8,6 +8,8 @@ import ReactNativeModal from 'react-native-modal';
 export default function App() {
   const [txt, setTxt] = useState("")
   const [valor,setValor] = useState(["cafe","cerveza","suco","refrigerante","agua","jagua"])
+    //const [valor,setValor] = useState([{name:'pp', id:1},{name:'333', id:2}])
+
   const [isVisible, setIsVisible] = useState(false)
   const [borrar, setBorrar] = useState(false)
 
@@ -18,17 +20,16 @@ export default function App() {
   return (
     <SafeAreaView style={{ marginTop: StatusBar.currentHeight}}>
       <Container style={styles.container}>
-        
         <Input onChangeText={text => setTxt(text)}/>
         <Button onPress={() => setValor([...valor,txt])}>
           <Text>+</Text>
         </Button>
-        {/* <FlatList 
+        <FlatList 
         data={valor}
-        renderItem={([v])=> <Box>{v[0]}</Box>}
+        renderItem={({valor})=> <Text style={{color:'blue'}}>{valor}</Text>}
         keyExtractor={index => index}
-        /> */}
-        {
+        />
+        {/* {
           valor.map( (v,index) => <Box onPress={() => {
             setIsVisible(!isVisible)
             if (borrar) {
@@ -36,7 +37,7 @@ export default function App() {
             }  
           }
           }>{v}</Box>)
-        }
+        } */}
       </Container>
       <ReactNativeModal isVisible={isVisible}>
         <View>

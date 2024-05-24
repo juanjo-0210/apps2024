@@ -21,9 +21,9 @@ const Delete = () => {
             consult()
         }}>Borrar</button>
         <div>
-            {userList.map(obj => (
+            {/* {userList.map(obj => (
                 <p>{obj.userName} -- {obj.id}</p>
-            ))}
+            ))} */}
         </div>
     </div>
   )

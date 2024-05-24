@@ -1,22 +1,14 @@
-import { db, collection, addDoc, getDocs, query, doc, deleteDoc } from "./api";
-import { Task, Id } from "../common/types/task"
-import { PersonalData } from "../common/types/personalData"
+import { conec } from "./dbNode";
 
-
-const collectionName:string = 'Persons';
 
 // CREATE
-export const createPersons = async(obj:string) => {
-    const colRef = collection(db, collectionName);
-    const data = await addDoc(colRef, obj);
-    return data.id;
+export const createPersons = async(obj) => {
+    conec.post('/user',obj)
 }
 
     //CON TYPESCRIPT
-    export const createPersonsTypeS = async (obj:PersonalData[]) => {
-    const colRef = collection(db,collectionName);
-    const data:Id = await addDoc(colRef, obj);
-    return data.id;
+    export const createPersonsTypeS = async (obj) => {
+    
     };
 
 
@@ -24,24 +16,19 @@ export const createPersons = async(obj:string) => {
 
 // READ
 export const getItems = async ()  => {
-    const colRef = collection(db, collectionName);
-    const result = await getDocs(query(colRef));
-    return getArrayFromCollection(result);
+    
 }
 
     //CON TYPESCRIPT
-    export const getTasks = async (arg:string):Promise<Task[]> => {
-    const colRef = collection(db, arg);
-    const result = await getDocs(query(colRef));
-    return getArrayFromCollection(result);
+    export const getTasks = async (arg) => {
+    
     };
 
 
 
 // DELETE
 export const deleteItem = async (id) => {
-    const docRef = doc(db, collectionName, id);
-    await deleteDoc(docRef);
+    
 }
 
 const getArrayFromCollection = (collection) => {
