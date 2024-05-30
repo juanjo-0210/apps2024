@@ -1,0 +1,26 @@
+
+    {/* <Stack>
+        <Stack.Screen name="Home" />
+        <Stack.Screen name="Home2" />
+    </Stack> */}
+
+
+
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Drawer>
+          <Drawer.Screen
+            name="index" // This is the name of the page and must match the url from root
+            options={{
+              drawerLabel: 'Home',
+              title: 'HOME',
+            }}
+          />
+          <Drawer.Screen
+            name="Home2" // This is the name of the page and must match the url from root
+            options={{
+              drawerLabel: 'Primo',
+              title: 'Primo',
+            }}
+          />
+      </Drawer>
+  </GestureHandlerRootView>
